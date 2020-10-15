@@ -1,0 +1,90 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "C_Cpp.clang_format_sortIncludes": true,
+        "C_Cpp.default.cppStandard": "c++20",
+        "C_Cpp.default.cStandard": "c11",
+        "C_Cpp.default.intelliSenseMode": "clang-x64",
+        "C_Cpp.errorSquiggles": "Disabled",
+        "C_Cpp.loggingLevel": "Debug",
+        "C_Cpp.autocomplete": "Disabled",
+        "code-runner.runInTerminal": true,
+        "code-runner.executorMap": {
+            "c": "clang $dir'$fileName' -lm -o $dir'$fileNameWithoutExt.out' -Wall -g -std=c11 && $dir'$fileNameWithoutExt.out'",
+            "cpp": "clang++ $dir'$fileName' -lm -o $dir'$fileNameWithoutExt.out' -Wall -g -std=c++17 && $dir'$fileNameWithoutExt.out'"
+        },
+        "code-runner.saveFileBeforeRun": true,
+        "code-runner.preserveFocus": false,
+        "code-runner.clearPreviousOutput": false,
+        "code-runner.ignoreSelection": true,
+        "files.associations": {
+            "iostream": "cpp"
+        }
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: 当前文件",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+                "preLaunchTask": "Compile"
+            }
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Compile",
+                "command": "clang++",
+                "args": [
+                    "${file}",
+                    "-o",
+                    "${fileDirname}/${fileBasenameNoExtension}.out",
+                    "-g",
+                    "-Wall",
+                    "-static-libgcc",
+                    // "-fcolor-diagnostics",
+                    "-std=c++17"
+                ],
+                "type": "shell",
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                }
+            }
+        ]
+    }
+}

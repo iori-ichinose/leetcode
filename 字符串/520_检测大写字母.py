@@ -1,0 +1,4 @@
+# 人生苦短
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        return word.upper() == word or word.lower() == word or word.title() == word
