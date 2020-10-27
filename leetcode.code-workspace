@@ -22,7 +22,11 @@
         "code-runner.clearPreviousOutput": false,
         "code-runner.ignoreSelection": true,
         "files.associations": {
-            "iostream": "cpp"
+            "iostream": "cpp",
+            "algorithm": "cpp",
+            "string": "cpp",
+            "*.tcc": "cpp",
+            "vector": "cpp"
         }
     },
     "launch": {
