@@ -9,9 +9,7 @@
         "C_Cpp.default.cppStandard": "c++20",
         "C_Cpp.default.cStandard": "c11",
         "C_Cpp.default.intelliSenseMode": "clang-x64",
-        "C_Cpp.errorSquiggles": "Disabled",
         "C_Cpp.loggingLevel": "Debug",
-        "C_Cpp.autocomplete": "Disabled",
         "code-runner.runInTerminal": true,
         "code-runner.executorMap": {
             "c": "clang $dir'$fileName' -lm -o $dir'$fileNameWithoutExt.out' -Wall -g -std=c11 && $dir'$fileNameWithoutExt.out'",
@@ -26,7 +24,8 @@
             "algorithm": "cpp",
             "string": "cpp",
             "*.tcc": "cpp",
-            "vector": "cpp"
+            "vector": "cpp",
+            "random": "cpp"
         }
     },
     "launch": {
